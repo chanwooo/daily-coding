@@ -46,34 +46,38 @@
 # #
 # # print(dfs(graph,'A'))
 # #
+# #
 #
+# def solution(N, number):
+#     arr = [[], [], [], [], [], [], [], [], []]
+#     min_count = -1
+#
+#     for i in range(1, 9):
+#         arr[i].append(int(str(N) * i))
+#
+#         for j in range(1, i):
+#             for a in arr[j]:
+#                 for b in arr[i - j]:
+#                     arr[i].append(a + b)
+#                     arr[i].append(a - b)
+#                     arr[i].append(a * b)
+#                     if b is not 0:
+#                         arr[i].append(a // b)
+#         print(arr)
+#
+#
+#
+#         if number in arr[i]:
+#             min_count = i
+#             break
+#     return min_count, arr
+#
+# v,arr = solution(5, 12)
+#
+# for a in arr:
+#     print(sorted(list(set(a))))
+import heapq
+heap = [100,2,3,4,5,6,10]
+heapq.heapify(heap)
 
-def solution(N, number):
-    arr = [[], [], [], [], [], [], [], [], []]
-    min_count = -1
-
-    for i in range(1, 9):
-        arr[i].append(int(str(N) * i))
-
-        for j in range(1, i):
-            for a in arr[j]:
-                for b in arr[i - j]:
-                    arr[i].append(a + b)
-                    arr[i].append(a - b)
-                    arr[i].append(a * b)
-                    if b is not 0:
-                        arr[i].append(a // b)
-        print(arr)
-
-
-
-        if number in arr[i]:
-            min_count = i
-            break
-    return min_count, arr
-
-v,arr = solution(5, 12)
-
-for a in arr:
-    print(sorted(list(set(a))))
-
+print(heap) # [1,2,3,5,7]
