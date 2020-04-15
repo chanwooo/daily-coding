@@ -6,8 +6,8 @@
 # commit rule
 
 - [문제 사이트] 번호 - 제목
-  - ex) [Programmers] 42840 모의고사
-  - ex) [BOJ] 2110 공유기 설치
+  - ex) [Programmers] 42840 - 모의고사
+  - ex) [BOJ] 2110 - 공유기 설치
 
 
 # 풀 문제
