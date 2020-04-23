@@ -1,6 +1,7 @@
 """
-https://programmers.co.kr/learn/courses/30/lessons/60057
 [Programmers] 60057 - 문자열 압축
+
+https://programmers.co.kr/learn/courses/30/lessons/60057
 2020 카카오 공채 코딩테스트 기출
 """
 def solution(s):
