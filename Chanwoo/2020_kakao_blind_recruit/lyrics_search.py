@@ -25,7 +25,7 @@ def find(trie, query):
         if query[0] == "?":
             return v
         else:
-            if query[0] not in curr:
+            if len(trie)==0 or query[0] not in curr:
                 return 0
             v = curr[query[0]][0]
             curr = curr[query[0]][1]
@@ -35,7 +35,6 @@ def find(trie, query):
 
 
 def solution(words, queries):
-
     trie = defaultdict(dict)
     rev_trie = defaultdict(dict)
     len_dict = defaultdict(int)
@@ -52,19 +51,21 @@ def solution(words, queries):
         if q[0] == "?" and q[-1] == "?":
             ans.append(len_dict[lq])
         elif q[-1] == "?":
-            ans.append(find(trie.get(lq,[lq, 0]), q))
+            # ans.append(find(trie.get(lq, [lq, 0]), q))
+            ans.append(find(trie[lq], q))
         elif q[0] == "?":
-            ans.append(find(rev_trie.get(lq,[lq, 0]), q[::-1]))
+            # ans.append(find(rev_trie.get(lq, [lq, 0]), q[::-1]))
+            ans.append(find(rev_trie[lq], q[::-1]))
         else:
             print("error")
 
     return ans
 
 
-
 # [3, 2, 4, 1, 0]
-w, q =["frodo", "front", "frost", "frozen", "frame", "kakao"], ["fro??", "????o", "fr???", "fro???", "pro?"]
+w, q = ["frodo", "front", "frost", "frozen", "frame", "kakao"], ["fro??", "????o", "fr???", "fro???", "pro?"]
 
 # w, q = ["frodo", "frozen","aaaaa"], ["a????"]
+# w, q = ["ac"],["a?","?c","???"]
 
 print(solution(w, q))
