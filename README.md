@@ -1,6 +1,7 @@
 # daily-coding
 매일 코딩
 
+코딩테스트 문제(PS) 풀어보고 남겨놓는 저장소입니다.
 
 
 # commit rule
