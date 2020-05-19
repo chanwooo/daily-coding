@@ -53,7 +53,7 @@ def dfs(graph, start_node):
             visit.append(node)
             # stack.extend(graph[node])
             stack.extend(sorted(graph[node], reverse=True))
-            # print(stack, visit)
+            print(stack, visit)
     return visit
 
 
@@ -67,7 +67,7 @@ def bfs(graph, start_node):
             visit.append(node)
             queue.extend(sorted(graph[node]))
 
-            # print(queue)
+            print(queue, visit)
     return visit
 
 
