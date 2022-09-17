@@ -13,3 +13,8 @@
 ### 각 언어별 환경구성 해야함
 - Java : gradle
 - Python : venv
+
+
+### 폴더 날짜 포멧
+- java : ps+연월 + (_제목)
+- python : 연월 + (_제목)
