@@ -44,7 +44,7 @@ print(solution(4, [1, 2, 4, 4, 3], [2, 3, 1, 3, 1]))
 print(solution(3, [1, 3], [2, 2]))
 #     paths = dfs_paths(path, start, end)
 #
-#     transfer = 0
+#     convfer = 0
 #     # print(paths)
 #     for p in paths:
 #         for ep in p:

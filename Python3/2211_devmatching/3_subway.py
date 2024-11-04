@@ -15,7 +15,7 @@ def solution(subway, start, end):
 
     paths = dfs_paths(path, start, end)
 
-    transfer = 0
+    convfer = 0
     # print(paths)
     # for p in paths:
     #     for ep in p:
@@ -32,7 +32,7 @@ def solution(subway, start, end):
 def dfs_paths(graph, start, goal):
     stack = [(start, [start])]
     result = []
-    transfer = 0
+    convfer = 0
 
     while stack:
         n, path = stack.pop()
